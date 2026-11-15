@@ -6,12 +6,15 @@ Security fixes ship on the default branch (**`master`**). Consume this repositor
 
 ## Reporting a vulnerability
 
-Email **Garret Patten** at **<garret.patten@proton.me>** with:
+**Preferred:** use GitHub private vulnerability reporting (Security tab →
+"Report a vulnerability") on this repository.
+
+**Fallback:** email **Garret Patten** at **<garret.patten@proton.me>** with:
 
 - Brief description of impact and suspected component (script path, workflow, dependency, or config).
 - Whether you believe it is remotely exploitable and any proof-of-concept you can safely share.
 
-You should receive acknowledgement of receipt; substantive updates align with remediation progress. If a finding is declined, reasoning will be given.
+Reports are acknowledged within **7 days**; substantive updates align with remediation progress. If a finding is declined, reasoning will be given.
 
 Do not open public GitHub issues for security-sensitive reports.
 

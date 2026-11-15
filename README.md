@@ -1,75 +1,48 @@
-# Template Repository
+# github-standards
 
-[![License: MIT](https://img.shields.io/github/license/garretpatten/template?style=flat-square)](./LICENSE)
-[![Use this template](https://img.shields.io/badge/use_this_template-2ea44f?style=flat-square&logo=github)](https://github.com/garretpatten/template/generate)
+This repository is the **canonical source of truth** for all GitHub repository
+standards maintained by **Garret Patten**. Every other repository, and every
+agent (Opencode, Grok, Grok Bots) operating on those repositories, **must read
+and conform to the standards defined here**.
 
-A GitHub template for new projects with formatting standards, PR-scoped linting,
-security guardrails, CODEOWNERS enforcement, and community docs preconfigured.
+The `github-audit` skill loads and follows the files in this repository as the
+authoritative source. `AGENTS.md` (or equivalent) files in other repositories
+should contain a short pointer to this repository rather than restating the
+standards.
 
-## Quick start
+## Standards files
 
-1. Click **Use this template** on GitHub (or clone and reinitialize).
-2. Update **`.github/CODEOWNERS`** with your maintainers.
-3. Replace placeholder URLs in **`.github/ISSUE_TEMPLATE/config.yml`** and **CONTRIBUTING.md**.
-4. Trim unused `*_run` inputs in **`.github/workflows/quality-checks.yaml`** for your stack.
-5. Trim unused package ecosystems in **`.github/dependabot.yaml`** if your project does not use npm.
-6. Run **`npm install`** and **`npm run lint`** before opening pull requests.
+| Standard             | File                                                   |
+| -------------------- | ------------------------------------------------------ |
+| License              | [license.md](./license.md)                             |
+| Security policy      | [security-policy.md](./security-policy.md)             |
+| Contributing         | [contributing.md](./contributing.md)                   |
+| Community files      | [community-files.md](./community-files.md)             |
+| CODEOWNERS           | [codeowners.md](./codeowners.md)                       |
+| Branch protection    | [branch-protection.md](./branch-protection.md)         |
+| Signed commits       | [signed-commits.md](./signed-commits.md)               |
+| Dependabot           | [dependabot.md](./dependabot.md)                       |
+| Dependency hygiene   | [dependency-hygiene.md](./dependency-hygiene.md)       |
+| Secret hygiene       | [secret-hygiene.md](./secret-hygiene.md)               |
+| Workflow permissions | [workflows-permissions.md](./workflows-permissions.md) |
+| Action pinning       | [action-pinning.md](./action-pinning.md)               |
+| Repository metadata  | [repository-metadata.md](./repository-metadata.md)     |
+| CI and quality       | [ci-and-quality.md](./ci-and-quality.md)               |
+| Exceptions           | [exceptions.md](./exceptions.md)                       |
+| Verification         | [verification.md](./verification.md)                   |
 
-## Formatting and lint config
+## Proposing changes
 
-| File                                         | Purpose                                          |
-| -------------------------------------------- | ------------------------------------------------ |
-| [`.prettierrc`](./.prettierrc)               | Prettier defaults (100-char prose, 80-char YAML) |
-| [`.prettierignore`](./.prettierignore)       | Build artifacts and lockfiles                    |
-| [`.markdownlint.yaml`](./.markdownlint.yaml) | Markdown rules (`MD013` off; Prettier wraps)     |
-| [`.yamllint`](./.yamllint)                   | YAML rules (80-char lines)                       |
-| [`.truffleignore`](./.truffleignore)         | TruffleHog exclusions                            |
-| [`.trivyignore`](./.trivyignore)             | Trivy vulnerability/license exclusions           |
+All changes to these standards require a **pull request with signed commits**
+into this repository. See [contributing.md](./contributing.md) for the process.
+Dependabot does not open pull requests automatically here; dependency bumps are
+performed manually and intentionally.
 
-Local lint entrypoint:
+## Scope
 
-```bash
-npm install
-npm run lint
-```
+This repository applies every standard it defines to itself. It was created
+from [garretpatten/template](https://github.com/garretpatten/template) and
+inherits the CI stack (`codeowners-enforcer`, `security-guardrails`,
+`quality-checks`), CODEOWNERS, `dependabot.yaml`, and the `CI` ruleset.
 
-## GitHub workflows
-
-| Workflow                                                            | Reusable source                                                                         | Purpose                                                                           |
-| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [quality-checks](./.github/workflows/quality-checks.yaml)           | [garretpatten/quality-checks](https://github.com/garretpatten/quality-checks)           | PR-scoped linters (Prettier, Markdownlint, Yamllint, Shellcheck, ESLint, Ruff, …) |
-| [security-guardrails](./.github/workflows/security-guardrails.yaml) | [garretpatten/security-guardrails](https://github.com/garretpatten/security-guardrails) | OpenGrep SAST, verified TruffleHog, dependency review, Trivy                      |
-| [codeowners-enforcer](./.github/workflows/codeowners-enforcer.yaml) | [garretpatten/codeowners-enforcer](https://github.com/garretpatten/codeowners-enforcer) | Fail PRs when changed files lack CODEOWNERS coverage                              |
-
-Set each `*_run` input to `false` for tools your project does not use. Jobs no-op when
-nothing relevant changed.
-
-## GitHub configuration
-
-- **[CODEOWNERS](./.github/CODEOWNERS)** — default owner for all paths
-- **[Dependabot](./.github/dependabot.yaml)** — daily GitHub Actions update PRs (limit 0 open)
-- **[Issue templates](./.github/ISSUE_TEMPLATE/)** — bug report and feature request forms
-- **[Pull request template](./.github/pull_request_template.md)** — checklist with CoC and security links
-
-## Project docs
-
-- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — how to report issues and run local checks
-- **[SECURITY.md](./SECURITY.md)** — vulnerability disclosure and supported scope
-- **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** — community standards
-- **[AGENTS.md](./AGENTS.md)** — conventions for AI coding agents
-- **[LICENSE](./LICENSE)** — MIT
-
-## VS Code
-
-- **[`.vscode/settings.json`](./.vscode/settings.json)** — format on save with Prettier
-- **[`.vscode/extensions.json`](./.vscode/extensions.json)** — recommends Prettier extension
-
-## Requirements
-
-- Node.js (for Prettier and Markdownlint)
-- GitHub Actions enabled
-- Optional locally: `yamllint`, `actionlint`, and stack-specific linters enabled in quality-checks
-
-## License
-
-MIT — see [LICENSE](./LICENSE).
+**Last verified: 2026-11-15.**
