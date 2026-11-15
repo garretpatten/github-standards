@@ -47,8 +47,11 @@ manual review.
 
 ## Audit checks
 
+In this repository the active `CI` ruleset is id `27317843`
+(<https://github.com/garretpatten/github-standards/rules/27317843>).
+
 ```bash
-gh api repos/OWNER/REPO/rulesets |
+gh api repos/OWNER/REPO/rulesets --paginate |
   --jq '[.[] | select(.enforcement == "active")] | length'
 gh api repos/OWNER/REPO/rulesets/RULESET_ID |
   jq '.conditions, .rules, .bypass_actors'

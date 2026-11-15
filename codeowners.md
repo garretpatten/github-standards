@@ -27,8 +27,11 @@ line (later rules take precedence in CODEOWNERS).
 
 - `garretpatten/github-standards`: `.github/.codeownersignore` is absent —
   no exempted paths.
+- `garretpatten/template`: no `.github/.codeownersignore` observed.
 
 ## Audit checks
+
+In this repository `.github/CODEOWNERS` contains exactly `* @garretpatten`.
 
 ```bash
 gh api repos/OWNER/REPO/contents/.github/CODEOWNERS --jq '.content' |
