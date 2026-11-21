@@ -114,6 +114,27 @@ gh api repos/OWNER/REPO --jq
     default_branch, private, homepage}'
 ```
 
+## README branding (readme-branding.md)
+
+```bash
+# Header block: project badge, title, tagline, metadata badges, CI badges
+gh api repos/OWNER/REPO/contents/README.md --jq '.content' | base64 -d |
+  head -60
+
+# Badge URLs resolve (sample a few)
+curl -sL -o /dev/null -w '%{http_code}\n' '<BADGE_URL>'
+
+# One workflow badge per active CI workflow
+gh api repos/OWNER/REPO/actions/workflows --paginate \
+  --jq '.workflows[] | .path + " | " + .state'
+```
+
+Verify: centered branding block (for-the-badge project badge, centered H1,
+bold tagline), flat-square metadata badges (license, runtime), one workflow
+status badge per enabled CI workflow pinned to the default branch; badge
+URLs return 200; body is plain Markdown. Documentation-only repositories
+may keep a plain README (see readme-branding.md applicability).
+
 ## Standards-file drift detection
 
 The audit skill should compare this repository's canonical standards files

@@ -5,18 +5,18 @@ recommended files. Every repository must contain the **required** files below.
 
 ## File requirements
 
-| File                               | Status       | Standard                                   |
-| ---------------------------------- | ------------ | ------------------------------------------ |
-| `README.md`                        | **Required** | Overview, links, purpose                   |
-| `LICENSE` (MIT)                    | **Required** | [license.md](./license.md)                 |
-| `SECURITY.md`                      | **Required** | [security-policy.md](./security-policy.md) |
-| `CONTRIBUTING.md`                  | **Required** | [contributing.md](./contributing.md)       |
-| `.github/CODEOWNERS`               | **Required** | [codeowners.md](./codeowners.md)           |
-| `.github/ISSUE_TEMPLATE/`          | Recommended  | Bug report and feature request forms       |
-| `.github/pull_request_template.md` | Recommended  | PR checklist                               |
-| `CODE_OF_CONDUCT.md`               | Optional     | Present in the template; keep when present |
-| `.github/dependabot.yaml`          | **Required** | [dependabot.md](./dependabot.md)           |
-| `.github/.codeownersignore`        | Optional     | [codeowners.md](./codeowners.md)           |
+| File                               | Status       | Standard                                                                          |
+| ---------------------------------- | ------------ | --------------------------------------------------------------------------------- |
+| `README.md`                        | **Required** | Overview, links, purpose; branding per [readme-branding.md](./readme-branding.md) |
+| `LICENSE` (MIT)                    | **Required** | [license.md](./license.md)                                                        |
+| `SECURITY.md`                      | **Required** | [security-policy.md](./security-policy.md)                                        |
+| `CONTRIBUTING.md`                  | **Required** | [contributing.md](./contributing.md)                                              |
+| `.github/CODEOWNERS`               | **Required** | [codeowners.md](./codeowners.md)                                                  |
+| `.github/ISSUE_TEMPLATE/`          | Recommended  | Bug report and feature request forms                                              |
+| `.github/pull_request_template.md` | Recommended  | PR checklist                                                                      |
+| `CODE_OF_CONDUCT.md`               | Optional     | Present in the template; keep when present                                        |
+| `.github/dependabot.yaml`          | **Required** | [dependabot.md](./dependabot.md)                                                  |
+| `.github/.codeownersignore`        | Optional     | [codeowners.md](./codeowners.md)                                                  |
 
 `CODE_OF_CONDUCT.md` is optional for solo personal repositories. If present,
 document that choice in the file. The template ships the Contributor Covenant;

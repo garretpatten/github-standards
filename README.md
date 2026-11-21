@@ -18,6 +18,7 @@ standards.
 | Security policy      | [security-policy.md](./security-policy.md)             |
 | Contributing         | [contributing.md](./contributing.md)                   |
 | Community files      | [community-files.md](./community-files.md)             |
+| README branding      | [readme-branding.md](./readme-branding.md)             |
 | CODEOWNERS           | [codeowners.md](./codeowners.md)                       |
 | Branch protection    | [branch-protection.md](./branch-protection.md)         |
 | Signed commits       | [signed-commits.md](./signed-commits.md)               |
@@ -45,4 +46,4 @@ from [garretpatten/template](https://github.com/garretpatten/template) and
 inherits the CI stack (`codeowners-enforcer`, `security-guardrails`,
 `quality-checks`), CODEOWNERS, `dependabot.yaml`, and the `CI` ruleset.
 
-**Last verified: 2026-11-15.**
+**Last verified: 2026-11-21.**
