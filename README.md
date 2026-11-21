@@ -21,6 +21,7 @@ standards.
 | README branding      | [readme-branding.md](./readme-branding.md)             |
 | CODEOWNERS           | [codeowners.md](./codeowners.md)                       |
 | Branch protection    | [branch-protection.md](./branch-protection.md)         |
+| Pull requests        | [pull-requests.md](./pull-requests.md)                 |
 | Signed commits       | [signed-commits.md](./signed-commits.md)               |
 | Dependabot           | [dependabot.md](./dependabot.md)                       |
 | Dependency hygiene   | [dependency-hygiene.md](./dependency-hygiene.md)       |

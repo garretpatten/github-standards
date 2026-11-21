@@ -135,6 +135,21 @@ status badge per enabled CI workflow pinned to the default branch; badge
 URLs return 200; body is plain Markdown. Documentation-only repositories
 may keep a plain README (see readme-branding.md applicability).
 
+## Pull requests (pull-requests.md)
+
+```bash
+# Sample recent PR titles and body sizes
+gh api "repos/OWNER/REPO/pulls?state=closed&per_page=20" --paginate \
+  --jq '.[] | {number, title, body_len: (.body // "" | length)}'
+
+# Inspect a sampled PR body
+gh api repos/OWNER/REPO/pulls/<NUMBER> --jq '.body'
+```
+
+Verify: titles are imperative and noise-free; bodies link the related issue
+(`Closes #N` when applicable), summarize changes as bullets, state how the
+change was verified; no automated footers or signatures.
+
 ## Standards-file drift detection
 
 The audit skill should compare this repository's canonical standards files

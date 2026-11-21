@@ -26,7 +26,7 @@ consumers keep it unless deliberately removing it.
 
 - Description: non-empty and accurate (see
   [repository-metadata.md](./repository-metadata.md)).
-- Topics: at least one relevant topic.
+- Topics: a curated, relevant set (see [repository-metadata.md](./repository-metadata.md)).
 - Homepage: set when the project has one.
 
 ## Admins accept content reports
