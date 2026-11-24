@@ -4,8 +4,8 @@
    [security-policy.md](./security-policy.md)).
 2. **Push protection** must be enabled where available so secret-containing
    commits are rejected at push time.
-3. **TruffleHog verified-secret scan** remains required on every pull request
-   via `security-guardrails` (`trufflehog_run: true`).
+3. **TruffleHog verified-secret scan** remains required on every pull
+   request via `security-guardrails`.
 4. **No secrets in code, workflows, or history.** If a secret is ever found:
    - rotate/revoke it immediately;
    - purge it from history only after rotation;

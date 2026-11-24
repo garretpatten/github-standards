@@ -23,7 +23,7 @@ Required rules (exact parameters):
 | `non_fast_forward`       | blocked (no parameters)                                                                                                                                                                                                           |
 | `required_signatures`    | enabled (no parameters)                                                                                                                                                                                                           |
 | `pull_request`           | `required_approving_review_count: 1`, `dismiss_stale_reviews_on_push: true`, `require_code_owner_review: true`, `require_last_push_approval: true`, `required_review_thread_resolution: true`, `allowed_merge_methods: ["merge"]` |
-| `required_status_checks` | `strict_required_status_checks_policy: true`; contexts exactly matching the enabled workflow job display names                                                                                                                    |
+| `required_status_checks` | `strict_required_status_checks_policy: true`; contexts are the aggregate summaries (`Linters / checks`, plus `Accessibility Audits / checks` when that workflow is called) and the `Scans / *` and `Enforce Code Owners` contexts |
 
 Merge method: **merge commits only** (`allowed_merge_methods: ["merge"]`).
 Squash and rebase are not allowed. Revisit deliberately, not casually.
