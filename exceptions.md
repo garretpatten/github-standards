@@ -8,6 +8,7 @@ request.
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------- |
 | `m11s`             | **Fully excluded** from the standards program. No audits, no rulesets, no community-file requirements.                                                     | Personal/experimental repository outside the standards program. | 2027-11-15  |
 | `license-verifier` | Private repository on a free plan: no rulesets available; Dependabot security-updates setting cannot persist. All other standards apply; fixes are manual. | Free-plan private repositories do not support these features.   | 2027-11-15  |
+| `opengrep-review`  | Private repository on a free plan: no rulesets available. All other standards apply; fixes are manual.                                                     | Free-plan private repositories do not support these features.   | 2027-11-27  |
 
 Future exceptions must include:
 
